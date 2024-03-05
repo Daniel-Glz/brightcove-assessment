@@ -1,0 +1,27 @@
+.home {
+    .content {
+        .main-nav {
+            &__list {
+                list-style: none;
+            }
+
+            &__item {
+                margin: .5rem;
+            }
+
+            &__link {
+                text-decoration: none;
+                color: $font_color;
+                font-size: 1.2rem;
+                transition: color 0.1s ease;
+                display: block;
+                padding: 1rem 2rem;
+
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+        }
+    }
+
+}

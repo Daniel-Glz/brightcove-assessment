@@ -1,0 +1,16 @@
+{
+  "name": "brightcove-assessment",
+  "version": "1.0.0",
+  "description": "Brightcove Assessment",
+  "main": "/src/index.html",
+  "scripts": {
+    "watch": "sass --watch src/assets/scss/styles.scss src/assets/css/styles.css",
+    "build": "sass src/assets/scss/styles.scss src/assets/css/styles.css"
+  },
+  "author": "Daniel Gonzalez",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.71.1"
+  }
+}

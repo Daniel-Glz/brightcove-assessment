@@ -32,32 +32,18 @@ body {
     font-size: 2rem;
     text-transform: uppercase;
     color: $font_color;
-    margin-bottom: 2rem;
     text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: $font_color_light;
   }
 }
 
 .content {
-  &__explanation {
-    font-size: 1.2rem;
-    margin-top: 2rem;
-
-    &-title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    &-warning {
-        color: red;
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-
-    &-text {
-        line-height: 2;
-        margin-bottom: 2rem;
-    }
-  }
+  font-size: 1.2rem;
 }
 
 .footer {

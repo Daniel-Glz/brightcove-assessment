@@ -7,11 +7,12 @@
     <title>Brightcove Assessment - Problem #1</title>
 </head>
 <body>
-    <div class="main-wrapper home">
+    <div class="main-wrapper problem-1">
         <div class="container">
             <header class="header">
-                <a href="../" class="header__return-link">Return to homepage</a>
+                <a href="./" class="header__return-link">Return to homepage</a>
                 <h1 class="header__title">Problem #1</h1>
+                <h2 class="header__subtitle">Manipulation of video player</h2>
             </header>
 
             <div class="content">

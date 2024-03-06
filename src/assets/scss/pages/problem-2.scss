@@ -1,0 +1,16 @@
+.problem-2 {
+    .video-card {
+        margin: 2rem 0;
+        padding: 1rem;
+
+        &__title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        &__id {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

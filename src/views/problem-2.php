@@ -1,3 +1,9 @@
+<?php
+    require_once('./../controllers/VideoController.php');
+    $account_id = '6314466874001';
+    
+    $videos = VideoController::fetchVideos($account_id);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,27 +13,21 @@
     <title>Brightcove Assessment - Problem #2</title>
 </head>
 <body>
-    <div class="main-wrapper home">
+    <div class="main-wrapper problem-2">
         <div class="container">
             <header class="header">
-                <a href="../" class="header__return-link">Return to homepage</a>
+                <a href="./" class="header__return-link">Return to homepage</a>
                 <h1 class="header__title">Problem #2</h1>
+                <h2 class="header__subtitle">Get videos of account id: <?php echo $account_id ?></h2>
             </header>
 
             <div class="content">
-                <div class="brightcove-player">
-                    <video-js    
-                        id="brightcove-player"
-                        data-account="6314466874001"
-                        data-player="VHuNQ87E0N"
-                        data-embed="default"
-                        controls=""
-                        data-video-id="6348239508112"
-                        data-playlist-id=""
-                        data-application-id=""
-                        class="vjs-fluid">
-                    </video-js>
-                </div>
+                <?php foreach ($videos as $video) { ?>
+                    <div class="video-card">
+                        <h3 class="video-card__title">Name of video: <?php echo $video['name'] ?></h3>
+                        <p class="video-card__id">ID: <?php echo $video['id'] ?></p>
+                    </div>
+                <?php } ?>
             </div>
             <footer class="footer">
                 <p class="footer__text">
@@ -37,7 +37,5 @@
             </footer>
         </div>
     </div>
-    <script src="https://players.brightcove.net/6314466874001/VHuNQ87E0N_default/index.min.js"></script>
-    <script src="./../assets/js/problem-1.js"></script>
 </body>
 </html>

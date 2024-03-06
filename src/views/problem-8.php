@@ -43,7 +43,7 @@ Once you&apos;ve done that, save the changes, and your player should start worki
             <footer class="footer">
                 <p class="footer__text">
                     Link to repository: 
-                    <a class="footer__link" href="https://github.com" target="_blank">Github</a>
+                    <a class="footer__link" href="https://github.com/Daniel-Glz/brightcove-assessment" target="_blank">Github</a>
                 </p>
             </footer>
         </div>

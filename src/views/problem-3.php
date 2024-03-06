@@ -33,12 +33,19 @@
 
                 <div class="content__explanation">
                     <h2 class="content__explanation-title">Explanation / Process / Thoughts</h2>
+                    <p class="content__explanation-text">
+                        To start with this problem was easy for me, I saw that the Brightcove documentation has a video explaining how to add advertising to a video player, so I just followed the steps in the video. The video is located at this link: https://studio.support.brightcove.com/players/general/configuring-player-advertising-using-players-module.html 
+                    </p>
+
+                    <p class="content__explanation-text">
+                        I found this video really helpful, and I was able to add advertising to the video player without any problems.
+                    </p>
                 </div>
             </div>
             <footer class="footer">
                 <p class="footer__text">
                     Link to repository: 
-                    <a class="footer__link" href="https://github.com" target="_blank">Github</a>
+                    <a class="footer__link" href="https://github.com/Daniel-Glz/brightcove-assessment" target="_blank">Github</a>
                 </p>
             </footer>
         </div>

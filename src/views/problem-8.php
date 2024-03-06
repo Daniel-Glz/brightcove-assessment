@@ -16,11 +16,26 @@
             </header>
 
             <div class="content">
-
+                <div class="content__video">
+                    <div class="brightcove-player">
+                        <video-js    
+                            data-account="6314466874001"
+                            data-player="VHuNQ87E0N"
+                            data-embed="default"
+                            controls=""
+                            data-video-id="6348335383112"
+                            data-playlist-id=""
+                            data-application-id=""
+                            class="vjs-fluid">
+                        </video-js>
+                    </div>
+                </div>
                 <div class="content__explanation">
-                    <h2 class="content__explanation-title">Explanation / Process / Thoughts</h2>
+                    <h2 class="content__explanation-title">Explanation to "Non-Technical person"</h2>
                     <p class="content__explanation-text">
-                        To resolve this issue, the first thing I did was inspect the page and go to the video player tag, I found that everything seemed to be in order, also I checked the css and js files but everything was correct. I noticed that the script tag was not after the video player tag and neither at the end of the body tag. I realized that the script tag was in the head tag, so I moved it to the end of the body tag and the video player worked correctly.
+                    So You need to go to your webpage code, it seems that there&apos;s a piece of code called a script tag that&apos;s in the wrong place (&lt;script src=“{link}”&gt;&lt;/script&gt; that’s how the script tag should look). This tag is supposed to be at the end of the body tag in your webpage&apos;s code, but right now it&apos;s in the head section.
+To fix this, you&apos;ll need to access your website&apos;s code and find where the script tag is located, it should be after this tag &lt;head&gt; and before this tag &lt;/head&gt;. Then, simply cut it from where it is and paste it at the end of your website’s code just a line before the &lt;/body&gt; tag.
+Once you&apos;ve done that, save the changes, and your player should start working properly.
                     </p>
                 </div>
             </div>

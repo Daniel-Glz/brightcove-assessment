@@ -1,0 +1,27 @@
+.problem-6 {
+    .content {
+        &__video-btn {
+            margin: 1rem;
+            padding: 1rem;
+            background-color: $primary_color;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($primary_color, 10%);
+            }
+        }
+
+        .video-js:not(.show-controlbar):not(.not-hover) .vjs-control-bar {
+            transform: translateY(3em);
+        }
+          
+          .video-js:not(.show-controlbar):not(.not-hover) .vjs-progress-control {
+            height: 0.3em;
+            top: -0.3em;
+        }  
+    }
+}

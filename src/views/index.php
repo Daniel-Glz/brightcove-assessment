@@ -17,11 +17,13 @@
                 <nav class="main-nav">
                     <ul class="main-nav__list">
                         <?php for ($i = 1; $i <= 8; $i++) { ?>
+                            <?php if ($i === 4) { continue; } ?> 
                                 <li class='main-nav__item'>
                                     <a 
                                         class='main-nav__link' 
-                                        href='./problem-<?php echo $i; ?>.php'>
-                                        Problem #<?php echo $i; ?>
+                                        href='./problem-<?php echo $i; ?>.php'
+                                    >
+                                    Problem #<?php echo $i; ?>
                                     </a>
                                 </li>
                         <?php } ?>

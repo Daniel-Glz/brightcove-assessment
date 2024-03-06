@@ -1,3 +1,4 @@
+console.log(videojs);
 const videoPlayer = videojs.getPlayer('brightcove-player');
 
 videoPlayer.ready(() => {

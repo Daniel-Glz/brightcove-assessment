@@ -22,12 +22,29 @@
             </header>
 
             <div class="content">
-                <?php foreach ($videos as $video) { ?>
-                    <div class="video-card">
-                        <h3 class="video-card__title">Name of video: <?php echo $video['name'] ?></h3>
-                        <p class="video-card__id">ID: <?php echo $video['id'] ?></p>
-                    </div>
-                <?php } ?>
+                <div class="content__videos-container">
+                    <?php foreach ($videos as $video) { ?>
+                        <div class="video-card">
+                            <h3 class="video-card__title">Name of video: <?php echo $video['name'] ?></h3>
+                            <p class="video-card__id">ID: <?php echo $video['id'] ?></p>
+                        </div>
+                    <?php } ?>
+                </div>
+                <div class="content__explanation">
+                    <h2 class="content__explanation-title">Explanation / Process / Thoughts</h2>
+                    <p class="content__explanation-text">
+                        To start with this problem, I first migrated the code to php, I chose this language because it helps me with the needs of this problem, I wanted to keep the credentials safe so that's why I didn't simple use javascript (frontend) to fetch the videos.
+                        I created the requests that I was going to use in postman, the first one was to get the access token, the second one was to get the videos of the account id. I created the code in the APIModel.php file, utilizing the cURL library to make the requests.
+                    </p>
+                    
+                    <p class="content__explanation-text">
+                        As you see I used the MVC pattern to organize the code and I created a controller to fetch the videos (VideoController.php) through the model class (APIModel.php).
+                    </p>
+
+                    <p class="content__explanation-text">
+                        Notes: I didn't use the specified credentials in the problem description, because it seems that they were not valid anymore, so I used my own credentials creating them in the Admin module giving just the necessary permissions to read the videos.
+                    </p>
+                </div>
             </div>
             <footer class="footer">
                 <p class="footer__text">

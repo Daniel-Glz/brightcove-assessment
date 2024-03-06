@@ -44,6 +44,26 @@ body {
 
 .content {
   font-size: 1.2rem;
+
+  &__explanation {
+    margin-top: 2rem;
+
+    &-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &-warning {
+        color: red;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    &-text {
+        line-height: 2;
+        margin-bottom: 2rem;
+    }
+}
 }
 
 .footer {
@@ -59,14 +79,5 @@ body {
     color: $primary_color;
     text-decoration: none;
     transition: color 0.1s ease;
-  }
-}
-
-.brightcove-player {
-  max-width: 960px;
-  width: 100%;
-
-  .vjs-fluid:not(.vjs-audio-only-mode) {
-    padding-top: 56.25%;
   }
 }

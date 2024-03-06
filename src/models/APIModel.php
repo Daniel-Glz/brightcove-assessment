@@ -22,6 +22,60 @@
             return json_decode($response, true);
         }
 
+        private function create_video_object($name) {
+            $url = str_replace('{{account_id}}', ACCOUNT_ID, CMS_URL) . '/videos';
+
+            $data = array(
+                'name' => $name
+            );
+
+            $ch = curl_init();
+            curl_setopt_array($ch, array(
+                CURLOPT_POST => 1,
+                CURLOPT_URL => $url,
+                CURLOPT_HTTPHEADER => array(
+                    'Authorization: Bearer ' . $this->token,
+                    'Content-Type: application/json'
+                ),
+                CURLOPT_POSTFIELDS => json_encode($data),
+                CURLOPT_RETURNTRANSFER => true
+            ));
+
+            $response = curl_exec($ch);
+            $response = json_decode($response, true);
+            
+            return $response['id'];
+        }
+
+        public function upload_video($name, $video_url) {
+            $video_id = $this->create_video_object($name);
+
+            $url = str_replace('{{account_id}}', ACCOUNT_ID, INGEST_URL);
+            $url = str_replace('{{video_id}}', $video_id, $url);
+            
+            $data = array(
+                'master' => array(
+                    'url' => $video_url
+                )
+            );
+
+            $ch = curl_init();
+            curl_setopt_array($ch, array(
+                CURLOPT_POST => 1,
+                CURLOPT_URL => $url,
+                CURLOPT_HTTPHEADER => array(
+                    'Authorization: Bearer ' . $this->token,
+                    'Content-Type: application/json'
+                ),
+                CURLOPT_POSTFIELDS => json_encode($data),
+                CURLOPT_RETURNTRANSFER => true
+            ));
+
+            $response = curl_exec($ch);
+
+            return json_decode($response, true);
+        }
+
         public function get_token() {
             $ch = curl_init(AUTH_URL);
             $data = array('grant_type' => 'client_credentials');

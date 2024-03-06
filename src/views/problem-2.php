@@ -1,8 +1,8 @@
 <?php
     require_once('./../controllers/VideoController.php');
-    $account_id = '6314466874001';
-    
-    $videos = VideoController::fetchVideos($account_id);
+
+    $videoController = new VideoController();
+    $videos = $videoController->fetchVideos(ACCOUNT_ID);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@
             <header class="header">
                 <a href="./" class="header__return-link">Return to homepage</a>
                 <h1 class="header__title">Problem #2</h1>
-                <h2 class="header__subtitle">Get videos of account id: <?php echo $account_id ?></h2>
+                <h2 class="header__subtitle">Get videos of account id: <?php echo ACCOUNT_ID ?></h2>
             </header>
 
             <div class="content">
@@ -36,6 +36,10 @@
                         To start with this problem, I first migrated the code to php, I chose this language because it helps me with the needs of this problem, I wanted to keep the credentials safe so that's why I didn't simple use javascript (frontend) to fetch the videos.
                         I created the requests that I was going to use in postman, the first one was to get the access token, the second one was to get the videos of the account id. I created the code in the APIModel.php file, utilizing the cURL library to make the requests.
                     </p>
+
+                    <img src="./../assets/images/problem-2-postman.png" alt="Postman requests" class="content__explanation-image">
+
+                    <img src="./../assets/images/problem-2-postman2.png" alt="Postman requests" class="content__explanation-image">
                     
                     <p class="content__explanation-text">
                         As you see I used the MVC pattern to organize the code and I created a controller to fetch the videos (VideoController.php) through the model class (APIModel.php).
